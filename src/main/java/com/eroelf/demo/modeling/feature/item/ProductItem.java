@@ -1,12 +1,10 @@
 package com.eroelf.demo.modeling.feature.item;
 
 import com.eroelf.javaxsx.util.ml.feature.MapFeatureItem;
-import com.eroelf.javaxsx.util.ml.feature.UpdatableByItem;
 
-// Extends <1> implements <2>:
-// 1. This implementation uses HashMap to store feature ID and feature value. Other implementations can be found in the package. 
-// 2. Means this object can be "updated" (combine feature) by another object of the same class.
-public class ProductItem extends MapFeatureItem implements UpdatableByItem<ProductItem>
+// The MapFeatureItem implementation uses HashMap to store feature ID and feature value. Other implementations can be found in the package. 
+// The super class of MapFeatureItem, Item, also implemented the UpdatableByItem interface which means an Item object can be "updated" (combine feature) by another object of the Item class.
+public class ProductItem extends MapFeatureItem
 {
 	// Some common information for all products in the project, such as a product ID.
 	public String productId;
@@ -25,14 +23,6 @@ public class ProductItem extends MapFeatureItem implements UpdatableByItem<Produ
 		if(featureString==null)
 			featureString=super.getFeatureString();
 		return featureString;
-	}
-
-	// Define the feature combination strategy.
-	// This method will be invoked during an innumerable working flow.
-	@Override
-	public void update(ProductItem item)
-	{
-		featuresMap.putAll(item.featuresMap);
 	}
 
 	@Override

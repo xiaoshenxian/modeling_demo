@@ -1,7 +1,6 @@
 package com.eroelf.demo.modeling.flow.innumerable.strategy;
 
 import java.util.HashSet;
-import java.util.Set;
 
 import com.eroelf.demo.modeling.feature.UserStatisticsInfo;
 import com.eroelf.demo.modeling.feature.item.ProductItem;
@@ -44,7 +43,7 @@ public class TheStrategy1 extends Strategy<ProductItem>
 	}
 
 	@Override
-	protected Set<ProductItem> candicates()
+	protected Iterable<ProductItem> candicates()
 	{
 		// Generate all candidates related to this strategy here.
 		// Candidate sets from different strategies should not be mutual exclusive. See UpdatableByItem::update
