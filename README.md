@@ -26,11 +26,11 @@ Do you want to write a recommendation system in only 8 lines? Try javaxsx here:
 
 2. Create a *Converter* instance for converting back-end data to the front-end data the requester need.
 
-3. Create a *FlowHandler* instance defining the entire working flow behaviors, including the requester statistics computation, candidates generator, recall *Strategies*, *Modelers* for calculating feature, and *Scorers* for running models to give out the final score.
+3. Create a *FlowHandler* instance defining the entire working flow behaviors, including the requester statistics computation, candidates generator, recall *Strategies*, *Modelers* for calculating features, and *Scorers* for running models to give out the final scores.
 
-4. Create a *ItemFilterHandler* to deal with *Item* filters.
+4. Create an *ItemFilterHandler* to deal with *Item* filters.
 
-5. Create a *ItemGenerator* assembling all the requesting information, the *FlowHandler*, and the *ItemFilterHandler*.
+5. Create an *ItemGenerator* assembling all the requesting information, the *FlowHandler*, and the *ItemFilterHandler*.
 
 6. Invoke the *ItemGenerator::generate* method to get the featured and scored *Item* list.
 
